@@ -1,0 +1,12 @@
+---
+const { id, class: className = "", fullWidth = false, noPadding = false } = Astro.props;
+---
+
+<section
+  id={id}
+  class={`relative w-full border-b border-border overflow-hidden ${noPadding ? 'px-0' : 'px-6 py-16 sm:py-20 lg:py-24'} ${className}`}
+>
+  <div class={fullWidth ? "w-full" : "relative z-10 mx-auto max-w-7xl"}>
+    <slot />
+  </div>
+</section>

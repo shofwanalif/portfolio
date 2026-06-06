@@ -1,0 +1,19 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { Project } from "@/components/sections/Project";
+import { TechStack } from "@/components/sections/TechStack";
+---
+
+<Layout>
+  <SectionWrapper id="home" fullWidth={true}>
+    <HeroSection client:load />
+  </SectionWrapper>
+  <SectionWrapper id="project">
+    <Project client:load />
+  </SectionWrapper>
+  <SectionWrapper id="tech-stack" fullWidth={true} noPadding={true}>
+    <TechStack client:load />
+  </SectionWrapper>
+</Layout>
