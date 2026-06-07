@@ -64,7 +64,7 @@ export function HeroSection() {
         x={-1}
         y={-1}
         className={cn(
-          "mask-[linear-gradient(to_bottom_left,white,transparent,transparent)]",
+          "mask-[linear-gradient(to_bottom,white,transparent,transparent)]",
           "-z-10",
         )}
       />
@@ -93,7 +93,7 @@ export function HeroSection() {
               Malang. Interested in software engineering and networking.
             </p>
           </div>
-          <div className="flex gap-2 mb-6">
+          <div className="flex flex-col sm:flex-row gap-2 mb-6">
             <Button className="rounded-full px-6 py-2 font-semibold h-auto">
               Download CV
             </Button>

@@ -1,5 +1,6 @@
 "use client";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
+import { BlurFade } from "@/components/ui/blur-fade";
 import { Marquee } from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
 
@@ -28,6 +29,7 @@ const rowTwo: Tech[] = [
   { name: "Linux", icon: "devicon-linux-plain" },
   { name: "Figma", icon: "devicon-figma-plain colored" },
   { name: "Laravel", icon: "devicon-laravel-plain colored" },
+  { name: "Postman", icon: "devicon-postman-plain colored" },
 ];
 
 function TechCard({ name, icon }: Tech) {
@@ -58,30 +60,32 @@ export function TechStack() {
       />
 
       {/* Content */}
-      <div className="relative z-10">
-        {/* Heading */}
-        <div className="mx-auto max-w-7xl px-6 mb-12 text-center">
-          <h2 className="text-3xl font-semibold mt-2">Technology Stack</h2>
-          <p className="text-lg leading-8 text-muted-foreground mt-2">
-            A comprehensive list of technologies I have worked with and am
-            proficient in.
-          </p>
-        </div>
+      <BlurFade delay={0.25} inView direction="up" duration={0.5}>
+        <div className="relative z-10">
+          {/* Heading */}
+          <div className="mx-auto max-w-7xl px-6 mb-12 text-center">
+            <h2 className="text-3xl font-semibold mt-2">Technology Stack</h2>
+            <p className="text-lg leading-8 text-muted-foreground mt-2">
+              A comprehensive list of technologies I have worked with and am
+              proficient in.
+            </p>
+          </div>
 
-        {/* Marquee rows */}
-        <div className="flex flex-col gap-4 max-w-7xl mx-auto">
-          <Marquee pauseOnHover className="[--duration:35s]">
-            {rowOne.map((tech) => (
-              <TechCard key={tech.name} {...tech} />
-            ))}
-          </Marquee>
-          <Marquee reverse pauseOnHover className="[--duration:30s]">
-            {rowTwo.map((tech) => (
-              <TechCard key={tech.name} {...tech} />
-            ))}
-          </Marquee>
+          {/* Marquee rows */}
+          <div className="flex flex-col gap-2 max-w-7xl mx-auto">
+            <Marquee pauseOnHover className="[--duration:35s]">
+              {rowOne.map((tech) => (
+                <TechCard key={tech.name} {...tech} />
+              ))}
+            </Marquee>
+            <Marquee reverse pauseOnHover className="[--duration:30s]">
+              {rowTwo.map((tech) => (
+                <TechCard key={tech.name} {...tech} />
+              ))}
+            </Marquee>
+          </div>
         </div>
-      </div>
+      </BlurFade>
     </div>
   );
 }
