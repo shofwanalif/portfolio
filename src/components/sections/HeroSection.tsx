@@ -94,10 +94,21 @@ export function HeroSection() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-2 mb-6">
-            <Button className="rounded-full px-6 py-2 font-semibold h-auto">
-              Download CV
+            <Button
+              asChild
+              className="rounded-full px-6 py-2 font-semibold h-auto"
+            >
+              <a
+                href="https://drive.google.com/file/d/1pQDwE7I3O3kjEk56KQJquoexw5YFrIas/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download CV
+              </a>
             </Button>
-            <InteractiveHoverButton>Discuss a project</InteractiveHoverButton>
+            <a href="mailto:shofwanalif@webmail.umm.ac.id">
+              <InteractiveHoverButton>Discuss a project</InteractiveHoverButton>
+            </a>
           </div>
 
           <div className="flex items-center gap-4">
