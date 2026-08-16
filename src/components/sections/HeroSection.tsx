@@ -1,10 +1,10 @@
-"use client";
-import { GridPattern } from "@/components/ui/grid-pattern";
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import { Button } from "@/components/ui/button";
-import { TextAnimate } from "@/components/ui/text-animate";
-import { cn } from "@/lib/utils";
-import { Mail } from "lucide-react";
+'use client';
+import { GridPattern } from '@/components/ui/grid-pattern';
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
+import { Button } from '@/components/ui/button';
+import { TextAnimate } from '@/components/ui/text-animate';
+import { cn } from '@/lib/utils';
+import { Mail } from 'lucide-react';
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -58,51 +58,28 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function HeroSection() {
   return (
     <div>
-      <GridPattern
-        width={30}
-        height={30}
-        x={-1}
-        y={-1}
-        className={cn(
-          "mask-[linear-gradient(to_bottom,white,transparent,transparent)]",
-          "-z-10",
-        )}
-      />
+      <GridPattern width={30} height={30} x={-1} y={-1} className={cn('mask-[linear-gradient(to_bottom,white,transparent,transparent)]', '-z-10')} />
 
       {/*konten Hero Section */}
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2 mb-6">
             <img src="/alifavatar.svg" alt="Avatar" className="w-16 h-16" />
-            <h1 className="text-4xl font-bold tracking-tight">
-              Shofwan Alif Alfani
-            </h1>
+            <h1 className="text-4xl font-bold tracking-tight">Shofwan Alif Alfani</h1>
           </div>
 
           <div className="flex flex-col mb-6">
-            <TextAnimate
-              children="Engineered with precision and creativity."
-              as="h1"
-              className="text-6xl"
-            />
+            <TextAnimate children="Engineered with precision and creativity." as="h1" className="text-6xl" />
             {/* <h1 className="text-6xl ">
               Engineered with precision and creativity.
             </h1> */}
             <p className="mt-4 text-xl text-muted-foreground">
-              Undergraduate informatics student from University of Muhammadiyah
-              Malang. Interested in software engineering and networking.
+              Undergraduate informatics student from University of Muhammadiyah Malang. Interested in software engineering and networking.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-2 mb-6">
-            <Button
-              asChild
-              className="rounded-full px-6 py-2 font-semibold h-auto"
-            >
-              <a
-                href="https://drive.google.com/file/d/1pQDwE7I3O3kjEk56KQJquoexw5YFrIas/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-              >
+            <Button asChild className="rounded-full px-6 py-2 font-semibold h-auto">
+              <a href="https://drive.google.com/drive/folders/1ekPKwRcWSm01Ei3iXmcTYFJsb1gyfFBA?usp=sharing" target="_blank" rel="noreferrer">
                 Download CV
               </a>
             </Button>
@@ -121,7 +98,7 @@ export function HeroSection() {
               <GithubIcon className="h-5 w-5" />
             </a>
             <a
-              href="https://instagram.com/shofwanalif"
+              href="https://instagram.com/shofwan.aa"
               target="_blank"
               rel="noreferrer"
               className="flex h-12 w-12 items-center justify-center rounded-full border bg-background transition-colors hover:bg-muted"
